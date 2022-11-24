@@ -1,0 +1,2 @@
+# QT_design_pattern_practice
+这是我在学习设计模式时通过QT进行实现的一个练习项目，同时也是为开发mygalgame做准备。
