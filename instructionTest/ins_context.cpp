@@ -1,4 +1,4 @@
-#include "ins_context.h"
+﻿#include "ins_context.h"
 
 ins_context::ins_context()
 {
@@ -23,4 +23,9 @@ ins_context::ins_context(QString str)
 ins_context::ins_context(QString sender, QString head, QString body):ins_sender(sender),ins_head(head),ins_body(body)
 {
 
+}
+
+instruction ins_context::getIns() const
+{
+    return ins;
 }

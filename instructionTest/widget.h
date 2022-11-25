@@ -1,4 +1,4 @@
-#ifndef WIDGET_H
+﻿#ifndef WIDGET_H
 #define WIDGET_H
 #pragma once
 #include <QWidget>
@@ -8,6 +8,14 @@
 #include "ins_context.h"
 #include "ins_factory.h"
 //#include "ins_register.h"
+
+
+
+#define CONNECTINSTRUCTIONTOSLOT(insName,insSlotName)
+        static connect(#insName,&#insName::to##insName,#insSlotName,&#insSlotName::slot##insSlotName)
+
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }

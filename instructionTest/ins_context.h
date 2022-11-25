@@ -1,4 +1,4 @@
-#ifndef INS_CONTEXT_H
+﻿#ifndef INS_CONTEXT_H
 #define INS_CONTEXT_H
 #pragma once
 
@@ -19,6 +19,8 @@ public:
     QString ins_sender;
     QString ins_head;
     QString ins_body;
+    instruction getIns() const;
+
 private:
     instruction ins;
 

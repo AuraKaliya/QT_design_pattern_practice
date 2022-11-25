@@ -3,6 +3,14 @@
 instruction::instruction()
 {
 
+    //init MySQL
+    instructionMysql<<QString("MYSQL_SELECT")<<QString("MYSQL_INSERT")<<QString("MYSQL_UPDATE")<<QString("MYSQL_DELETE")<<QString("MYSQL_DROP");
+
+
+
+
+
+
 }
 
 QString instruction::ATK()
@@ -73,6 +81,11 @@ QString instruction::setIdx()
 QString instruction::inst(QString st)
 {
     return  QString(st+stEnd);
+}
+
+QList<QString> instruction::getInstructionMysql() const
+{
+    return instructionMysql;
 }
 
 

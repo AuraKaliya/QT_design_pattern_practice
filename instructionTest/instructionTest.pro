@@ -1,5 +1,7 @@
 QT       += core gui
 
+QT +=sql
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -20,10 +22,16 @@ SOURCES += \
     ins_factory.cpp \
     ins_order.cpp \
     ins_register.cpp \
+    insslot_factory.cpp \
+    insslot_register.cpp \
     instruction.cpp \
     instruction_base.cpp \
     instruction_callcard.cpp \
     instruction_match.cpp \
+    instruction_mysql_insert.cpp \
+    instruction_mysql_select.cpp \
+    instruction_mysql_update.cpp \
+    instructionslot_base.cpp \
     main.cpp \
     singleton.cpp \
     widget.cpp
@@ -33,10 +41,16 @@ HEADERS += \
     ins_factory.h \
     ins_order.h \
     ins_register.h \
+    insslot_factory.h \
+    insslot_register.h \
     instruction.h \
     instruction_base.h \
     instruction_callcard.h \
     instruction_match.h \
+    instruction_mysql_insert.h \
+    instruction_mysql_select.h \
+    instruction_mysql_update.h \
+    instructionslot_base.h \
     singleton.h \
     widget.h
 
