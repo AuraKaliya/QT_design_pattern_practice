@@ -1,6 +1,6 @@
-#include "instruction_mysql_select.h"
+﻿#include "instruction_mysql_select.h"
 
-instruction_MySQL_SELECT::instruction_MySQL_SELECT()
+instruction_MYSQL_SELECT::instruction_MYSQL_SELECT()
 {
 
 
@@ -8,15 +8,16 @@ instruction_MySQL_SELECT::instruction_MySQL_SELECT()
 
 }
 
-void instruction_MySQL_SELECT::soluteInstruction(ins_context con)
+void instruction_MYSQL_SELECT::soluteInstruction(ins_context con)
 {
 
     QString tmp;
 
-    QStringList tmpList=con.ins_body.split(QRegExp(QString("["+con.getIns().stEnd+" ]")));
+    QStringList tmpList=con.ins_body.split(QRegExp(QString("["+con.getIns().stMYSQLEnd+" ]")));
     tmp+=" SELECT ";
-    if(tmpList[0]=="All") tmp+="*";
-    else tmp+=tmpList[0];
+    //if(tmpList[0]=="All")
+        tmp+="*";
+    //else tmp+=tmpList[0];
 
     tmp+=" FROM ";
 
@@ -29,6 +30,9 @@ void instruction_MySQL_SELECT::soluteInstruction(ins_context con)
     }
 
     tmp+=" ; ";
-    emit toSelect(tmp);
+    qDebug()<<con.ins_body;
+    qDebug()<<tmp;
+    qDebug()<<tmpList[0];
+    emit work(tmpList[0],tmp);
 
 }

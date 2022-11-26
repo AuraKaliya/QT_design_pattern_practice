@@ -12,7 +12,7 @@ public:
 
     void soluteInstruction(ins_context);
 signals:
-    void toInsert(QString);
+    void work(QString,QString);
 };
-
+REGISTER_INSTRUCTION(instruction_MYSQL_INSERT);
 #endif // INSTRUCTION_MYSQL_INSERT_H

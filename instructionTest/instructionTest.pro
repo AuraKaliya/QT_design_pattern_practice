@@ -1,6 +1,5 @@
 QT       += core gui
-
-QT +=sql
+QT +=core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,10 +27,14 @@ SOURCES += \
     instruction_base.cpp \
     instruction_callcard.cpp \
     instruction_match.cpp \
+    instruction_mysql.cpp \
     instruction_mysql_insert.cpp \
     instruction_mysql_select.cpp \
     instruction_mysql_update.cpp \
     instructionslot_base.cpp \
+    instructionslot_mysql_insert.cpp \
+    instructionslot_mysql_select.cpp \
+    instructionslot_mysql_update.cpp \
     main.cpp \
     singleton.cpp \
     widget.cpp
@@ -47,10 +50,14 @@ HEADERS += \
     instruction_base.h \
     instruction_callcard.h \
     instruction_match.h \
+    instruction_mysql.h \
     instruction_mysql_insert.h \
     instruction_mysql_select.h \
     instruction_mysql_update.h \
     instructionslot_base.h \
+    instructionslot_mysql_insert.h \
+    instructionslot_mysql_select.h \
+    instructionslot_mysql_update.h \
     singleton.h \
     widget.h
 

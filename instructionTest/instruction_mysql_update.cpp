@@ -8,7 +8,7 @@ instruction_MYSQL_UPDATE::instruction_MYSQL_UPDATE()
 void instruction_MYSQL_UPDATE::soluteInstruction(ins_context con)
 {
     QString tmp;
-    QStringList tmpList = con.ins_body.split(QRegExp(QString("[ "+con.getIns().stEnd+" ]")));
+    QStringList tmpList = con.ins_body.split(QRegExp(QString("[ "+con.getIns().stMYSQLEnd+" ]")));
 
     tmp+=" UPDATE ";
     tmp+=tmpList[0];
@@ -17,10 +17,6 @@ void instruction_MYSQL_UPDATE::soluteInstruction(ins_context con)
     tmp+=" WHERE ";
     tmp+=tmpList[2];
     tmp+=" ; ";
-    emit toUpdate(tmp);
-
-
-
-
+    emit work(tmp,tmp);
 
 }

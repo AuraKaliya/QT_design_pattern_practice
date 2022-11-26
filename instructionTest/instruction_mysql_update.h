@@ -14,8 +14,8 @@ public:
     void soluteInstruction(ins_context);
 
 signals:
-    void toUpdate(QString);
+    void work(QString,QString);
 
 };
-
+REGISTER_INSTRUCTION(instruction_MYSQL_UPDATE);
 #endif // INSTRUCTION_MYSQL_UPDATE_H

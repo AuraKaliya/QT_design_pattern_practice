@@ -4,7 +4,7 @@
 
 #include <QString>
 #include <QStringList>
-
+#include <QList>
 #include <QDebug>
 
 #include "instruction.h"
@@ -19,6 +19,7 @@ public:
     QString ins_sender;
     QString ins_head;
     QString ins_body;
+    //QList< QString> ins_body;
     instruction getIns() const;
 
 private:

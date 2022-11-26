@@ -1,10 +1,11 @@
-#include "instruction.h"
+﻿#include "instruction.h"
 
 instruction::instruction()
 {
 
     //init MySQL
-    instructionMysql<<QString("MYSQL_SELECT")<<QString("MYSQL_INSERT")<<QString("MYSQL_UPDATE")<<QString("MYSQL_DELETE")<<QString("MYSQL_DROP");
+    instructionMysql<<QString("MYSQL_SELECT")<<QString("MYSQL_INSERT")<<QString("MYSQL_UPDATE");
+                  // <<QString("MYSQL_DELETE")<<QString("MYSQL_DROP");
 
 
 

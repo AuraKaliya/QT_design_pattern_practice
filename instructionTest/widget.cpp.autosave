@@ -60,11 +60,6 @@ Widget::Widget(QWidget *parent)
     initInstructionSystem();
 
 
-
-
-
-
-
     connect(ui->pushButton,&QPushButton::clicked,this,&Widget::soluteInstruction);
 }
 

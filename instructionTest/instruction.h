@@ -1,4 +1,4 @@
-#ifndef INSTRUCTION_H
+﻿#ifndef INSTRUCTION_H
 #define INSTRUCTION_H
 
 #pragma once
@@ -30,7 +30,7 @@ public:
     QString style="##";
     QString stEnd="|";
     QString stSenderEnd=":";
-
+    QString stMYSQLEnd="$";
 
 
 
